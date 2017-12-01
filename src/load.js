@@ -1,8 +1,3 @@
 const fs = require('fs');
 
-
-module.exports = function load(fileName) {
-
-  return fs.readFileSync(fileName, 'utf8');
-  
-}
+module.exports = day => fs.readFileSync(`data/${day}.txt`, 'utf8');

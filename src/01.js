@@ -1,4 +1,4 @@
-const data = require('./load')('data/01.txt');
+const data = require('./load')('01');
 
 const dataArray = data.split('').map(x => +x);
 
