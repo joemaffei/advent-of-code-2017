@@ -1,9 +1,8 @@
-const data = require('./load')('01');
+const input = require('./01-input');
 
-const dataArray = data.split('').map(x => +x);
-
-const total = dataArray.reduce((result, current, index) => {
-  const next = dataArray[(index + 1) % dataArray.length];
+const total = input.reduce((result, current, index) => {
+  const length = input.length;
+  const next = input[(index + 1) % length];
   return current === next
     ? result + current
     : result;
