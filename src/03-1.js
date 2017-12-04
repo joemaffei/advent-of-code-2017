@@ -44,3 +44,10 @@ const distanceFromCenter = x => {
 }
 
 console.log(distanceFromCenter(input));
+
+module.exports = {
+  squareLevel: squareLevel,
+  lastPointCoordinates: lastPointCoordinates,
+  squareAsObject: squareAsObject,
+  distanceFromCenter: distanceFromCenter
+}
