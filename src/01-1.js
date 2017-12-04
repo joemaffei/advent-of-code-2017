@@ -1,4 +1,4 @@
-const input = require('./01-input');
+const input = require('./01-parser');
 
 const total = input.reduce((result, current, index) => {
   const length = input.length;
