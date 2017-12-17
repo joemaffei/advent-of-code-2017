@@ -17,17 +17,19 @@ const reallocate = (arr) => {
 
 var history = [];
 var state = [...input];
-var cycles = 0;
 var flag = true;
+var loopSize;
+var stateString;
 
 while (flag) {
-  cycles++;
   state = [...reallocate(state)];
-  if (history.includes(JSON.stringify(state))) {
+  stateString = JSON.stringify(state);
+  if (history.includes(stateString)) {
     flag = false;
+    loopSize = history.length - history.indexOf(stateString);
   } else {
-    history.push(JSON.stringify(state));
+    history.push(stateString);
   }
 }
 
-console.log(cycles);
+console.log(loopSize);
