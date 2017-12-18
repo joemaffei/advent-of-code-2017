@@ -1,6 +1,6 @@
-const input = require('./07-parser');
+const input = require('./07-parser'); input
 
-const parents = input.filter(obj => Array.isArray(obj.children));
+const parents = input.filter(tower => Array.isArray(tower.children));
 
 const allChildren = parents.reduce((result, current) => result.concat(current.children), []);
 
